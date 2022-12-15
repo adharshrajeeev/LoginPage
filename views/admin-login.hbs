@@ -1,0 +1,22 @@
+<div class="demo-container" style="margin-top:50px ;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-12 mx-auto">
+        <div class="p-5 bg-white rounded shadow-lg">
+          <h2 class="mb-2 text-center">ADMIN LOGIN</h2>
+          <form action="/admin/adminlogin" method="post">
+              {{#if adminLoginError}}
+                <p class="error" style="color: red;">{{adminLoginError}}</p>
+              {{/if}}
+            <label class="font-500">Email</label>
+            <input name="email" class="form-control " type="email">
+             <label class="font-500">Password</label>
+            <input name="password" class="form-control " type="password">
+             <p class="text-center lead">Login to see </p>
+            <button type="submit" class="btn btn-primary btn-lg w-100 shadow-lg">LOGIN</button>
+          </form>        
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+<section style="overflow-x: hidden;">
+<nav class="navbar navbar-expand-lg" style="background-color: rgb(41, 41, 41);">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <h3 style="color: white;">WELCOME HOME</h3>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <form class="d-flex">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">
+            <h6 style="color:white ;margin-right:20px"  >
+             {{#if user}}
+              {{user.name}}
+              {{else}}
+              Account
+             {{/if}}
+            </h6>
+          </a>
+        </li>
+      </ul>
+      <button class="btn btn-warning" type="submit">
+        {{#if user}}
+        <a style="text-decoration:none ;" href="/logoutuser">LOGOUT</a>
+        {{else}}
+        <a style="text-decoration:none ;" href="/userlogin">LOGIN</a>
+        {{/if}}
+      </button>
+    </form>
+  </div>
+</nav>
+
+
+
+<div class="conatiner">
+  <div class="row">
+    <div class="col-md-4 p-5">
+      <div class="card" style="width: 18rem;">
+        <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/879db1d0-b43a-4ee1-89b0-814d66e83638/go-flyease-easy-on-off-shoes-6nd2cc.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Nike Flyease</h5>
+          <p class="card-text">Fell the freshness.</p>
+          <a href="#" class="btn btn-primary">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 p-5">
+      <div class="card" style="width: 18rem;">
+        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8REhUREhMVEhUSEhgVGBUVFhYZFRkSFhYZGBYVFhoYHSggGRolGxMYITIjJSkrLy8uGiAzODMtNygtLisBCgoKDg0NFxAPGi0dIB43LTAtNy0rLCswNzA3Ny03Nys3MC0tKzA3KzArKzQyLSsxLS03KzAvLTgtLTcyKy0wK//AABEIAOEA4QMBIgACEQEDEQH/xAAcAAEAAgMBAQEAAAAAAAAAAAAABQYCAwQHAQj/xABEEAACAQIEAwQGBwQHCQAAAAAAAQIDEQQSITEFQWEGE1FxByIyUoGRFEJyobHB8GKCktEjM0PC0uHxFRYXU2Nzg6Ky/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAkEQEAAgICAQMFAQAAAAAAAAAAARECEgMxcSFRYRMiQcHwBP/aAAwDAQACEQMRAD8A9pAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5+I1+7pVJr6sJP4pAdAIXiGInQqYZ5m1VqqhUi22m5wbjJX2alHlyZNAAAAAAAAAAAAAAAAAAAAAAAAAAAABx8T4rh8NFTr1YUYt2TnJK78I+L8io+krtLi8CsLVoNd1Oo1UTgrytllGF5exmipra97eQF5lJLV8j5nRHKrCvGM4tuFSEZR3V1JXT38Gjg4hj6k5/R6Ht29Zv6q6vl577W1aOHLzfSiZyj4iu5n2dMOPeaifPwnKGIjNyS+q7P9fP5G45OGYCNGGVPM3rKXi+i5Lp+LbZ1m+LfSN+2c9b+3oOTi1JzoVYreVKaXm4ux1nlfHO1+MrcTWBoTdGnTrqEnD2pRh61Vt9IxlZI6OWfJGFX+Vt4/iFWXD3HVVcVSqL7Kg5f3izlCwmPSr4WhPV0sRPJLRJ0qkJuN1snFq2nJci+llsABAAAAAAAAAAAAAAAAAAAAA04vFU6UHUqTjThFXcptRil1bA3EFX7W4KGLhgc+avN2yxWkXa9pSbSTty1fS+hSeLek+q6zVBQo4eMbxq1qUpzra2Tpx7yFoPX1tdvgQvB/R/PGYFYyUpUsbUqSrUpSd7w0sprZOUlKaktVeL6FpEj2/wX+0uK0sDGrkj9GdpRtLJNKrNtq/jTppq6dvDQqnaXG8ao0ocKxNN13mfdzyurOrGNsjptLM8utrrMueyLb6Mex+NwdX6VipU6bnTdONJ+vWSk0908sG8q0WZ+R6U7J3bs/HRys99eRRC9maNWng8NCcZUHToQhJVXF1Lwiou+VtXdr/HY2cHqU6Faop+q6rTUmrK2qtsvC17L2fIk5Tiua8/rW8bva2jObExpVFlmrrfdqz2k1a1vG/M8/wDo4cs9csJrLH1i+vDrxZxjcT1KcBBYavUo6K9Wmto/2kV4L3l0XTQlcHjadVZoSUvxXmhx80TOuca5e0/r3/rMuOouPWHQeJ9jaLq8QxmKeqTqtP8AarVXl1+xGZ6f2r4vKjBUqSz4jEXhSgt9vWqS8IxWrb00K/wnh2GwVFUMylJtzq1L2TnZJvXaCSSX82zvHby5RtyR8I/iNFXVT60XaL6zWV/dr8C8dneISrU25bwll81ZNP7yk1cVCpNKKahF3Te8mvrdFyS+fSzdiqqyVFzdRtdYqMVp8WWXWFlABlQAAAAAAAAAAAAAAAAHxsxzAY4msoRlNpvLFyst3ZXsuuh4X9LnxzGQpVKloyqOerajSw0U80KEE7Oo00s7Tld30Xqnt05u6upeaWhG8K4FhsM33FGnRcn60oxvUe71m9bdNUWEQXarsHhsbKjJN0FRiqX9HFXeHinlpxv7Li3o2nZN6O5P8I4dTwtGNGlGUYU/VWeTnOzd27tuy1em3RHVU8PFNPyOd1XyftK3wX+pUZKvFPbXWN+b8b/I04ipFmGITd5K1uX5v7zilLQoyrTX6/Poc6qPx/12v8iuYztXQp4yeGqTjTjClGWeTsnVfr5G9kskovq2yNxnbGdef0fh1PvZ86001Sir2zJNa+crK60UuZNohc8ZxOlQgp1akaavZZnZuXuxW8pdFds0VaFWpLvcPUdOq1e+0Z6aZk+e2vK+pCcI7PqEu+rzliMQ1rVnrZe7TW0I76Ik62Pbao0km+b0sn4eWl/M58nFhyY1nDpx8uWE3ii6mJxsKs5Toz72r7VRtPNDeNOnJXtBb5I7bu/LRGvWm8s045d47O/Jy5vpy353ZY4tUld3nOWmfe73sk14NPy80VntP2go0Kd5WlUd+7SerlzcbfVT3ekdGvWayjjwnDGrvyueUZTcREeHTd6pElwHjEac6atZp5ZX0WWUry83eW/RHmeD7eV839NRpyj/ANNyjJeWZtPy0Ldwzi2HxFpU2pZWpOL0mra6x8Oquupth7KDGlUUoqS2kk15NXRkZUAAAAAAAAB8bI7G8VjB5Vv4vb/MCSMXJEC+Mzfu7dd18T6+LS19nZPn/MtJac7wxzEN/tGWtmuT0Xjvv8SJj2woTbjSnOrPlTpQzTte2Z6ZYxdt5NaNFpJyiO1vBXsJVxFR3msn7Odylbxk1aMXvosy6kvh4ZVa9+YpYl0Tl+Bqm9/JN/Dl9xjKpazfvWXk9LmvP10W/n+mB8q89eab6L9I46zty52X2f0jfUqq2vNalc4px1O8aT1krOXKKV/Z66vp5lRuxvFadLd7aKK1dtNei0OCHG6MnrJx+0rffsV/Ezu3L3tf8znsBt472Jo4zEPERruKmo54xSk24xUE4yvZXUEtn4k/w3huGwlPJTioQ3bvq370nu3b7kVipUy7b/IwqYipU9RylJX0jdtt+QSMYibS2O4w6nqweWHOXN+XgjRHitOhGUrqCS9p2sndXbvvdJq3O5WeP8bWEeScX3lr5JLLZNXTlfVJ8vEpOP4jiMQ7yflyS+yuXnv1JbS38f7ftXVFXk/rSva3i1v+7zvrdNxKdUxdSq3UqSc5z1lJ7vkvJJJJLZJJI5oYRc3c6VFEtXxTOjDVGmmnqua3XkaNDKjVjfdL4oo/Rfoix1etw2nKtNzlGpOCct+7i/UT8fVaLoeWegzj9OWHng5zSqwrTlBP69NqPsvm1ld14NHqZkAAAAAAAAQ/aXFOnCnbadaMW+m+vTQoGP7RSVapGSacaklZp30k0vwPUMbhIVYOnPaXz6NFQ4rg61F3rU44ql7zgpuPmmrpc9NixKTCsx4wpWd9n93gbKXE9Er8mv5ExHg/D6yv3bhfnTnJf+srpfI5qvY2i/6uvKPScFL74uP4GrSnJHi8tNeTXxR3cFnF+yoU4PWWSKWafN2W703ON9ja6elSlJX96cXb+F/iSlPhlaKSVNWSslGa/OwKTdLFRWkVb8/1c2LGkL3Vdf2U/wCKn/jMoxrf8mp8XT/xhaSs8arXT1ktvD9XOTG8XpwV5O1tbbty8EjgrYLFy1jCMLJq8pxvZ25K/h1OP/drESd5Sjd83Jt/gBw8R4zVq3V8sG72W7XV/kiPvJ/f8izQ7LvnUS8lf8TopdnKEfavU+09PKysglKlQoym8sE5tcopu3nbb4kjDs7iZe5TXNyd5W6JafNlup0YwWWKUUuSVl8kacdiqdKEqlSShCEXKUnsordsWqEw/ZnD005VZyqW1d2oQSW7fO3myo9ovSNTop0eGQgnqniMvqrl/RJ+2/2padHucfauvxTiXsUZ0cI9YqrKnR7y20599OCmuaSeVdXqQtPshG9p47CJ84xxCnNdMmHhVb+ZFVrE1JSk6tabqTk8znN3bk9278zKlTnNXhCUl71rR+MpaFxwvZfBw172vUfjRwThbr3mMmtOqidj4fw2/r4aVdrnieIQt/BRWg1lLh51GFadTu6aU5P3HdfPa3XYnuGdka9X269GOtstJvE1b+Cjh1KKeq9qSsXbC8QoUv6nC8Op+D7nEV5r4zVjbiu02MmsqxVVfs06UKEEufsPMa0TZTMX2FxENXCrGPvV0qSfVRbbJzhPouhOMalSu2pK6VOKWj/alf8AA6sNhZSeeWaTeuaTbb829WXXAcSi6cVdJxiotc7pW/ImVR0kXPbi4L2Pw2FtOjG047TlJuadrXT+q/Kxf+AY+Van6/twk4S621Uvimvjcqrxa5snOyUZWqO1oNq1/actW30WqMtLCACKAAAAAAMZRucuIwGb684+TA+1uG0Jb04q7bullld7u61uQ+J4PXhd05d6vdlZT+atF/cacf2RnU9nF1ofvEHiuwGNfsY+f7zn+TAnYUsRfL3Uk/hb+K9jXhsTNOSqU5UZKTWWTjJNcpRlFtNNfLnYp2M9HHF37OMT/wDJUX5ER/w07QQlnp4pX/78vwcbFsepxxCNirI83w/AO11OyzYapbxlC782lEzwnDO2EGnJYeqr3cZSpK68LxSa8y2j0bvEYyqeBV4Pj9tcBSb6YuC/GDIjj/C+0+JtGnSp4aCal6leDqNr3p6aX5JLrcWL/wB4YOZVsFT7RqNquEw9SS+tHEKF/NNS18ml0NeLwvaeVu6o4Skra56rnd+aSt8hYtMpnn3pPdWr3NCLtTlmqTXi4uKp311WsnbxSfJE1V4b2mlG0Y4GEvedSb+SylfxHo97RVp95XrYarJKyfeSjaN72SjSS5+AiSVfo8Pqp3jKMb6txjTj82oZn8WdCoz2lWfk6kmv/pEpifRjxuStGphY6795O9vC3dGFD0W8biv63Ct33c6l/upmtoZ1lGLA0vej55PzbNscPTWmf5JIkKvos41JOLr4aKaa0lUvZ9chrw3oc4tHbGUVffWcvxgTY1aIYenznL7v5G+mqC+s/jZ/3Trj6IeJvfH019mMv5GWE9CVaEs302Kb3cYTu/G7zK4nI1YLEQ5ts7aWdRzxpVXGT3UW02/I66Xohl9fHTflF/nIl+HejKhSaf0itJrrYzbVOLhvDsbVaUKLpRe86iypddfWfwRf+HYKNGCgm3zcnu5Pds5sFwSlSVlKb85EhTppbfiRaZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/9k=" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Nike Revelution 5</h5>
+          <p class="card-text">Wherever You go Iam theree.</p>
+          <a href="#" class="btn btn-primary">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 p-5">
+      <div class="card" style="width: 18rem;">
+        <img src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e776b31d-d1f3-4e91-8b8c-3879f06a191a/air-force-1-mid-qs-shoes-Bxtdl9.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Nike flow High</h5>
+          <p class="card-text">High Always.</p>
+          <a href="#" class="btn btn-primary">Buy Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>

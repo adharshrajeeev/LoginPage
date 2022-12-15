@@ -1,0 +1,50 @@
+<section class="vh-90 bg-image" style="margin-top:20px ;">
+  <div class="mask d-flex align-items-center h-90 ">
+    <div class="container ">
+      <div class="row d-flex justify-content-center align-items-center h-90">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Add User Data</h2>
+
+              <form action="/admin/adminUserForm" method="post">
+
+                <div class="form-outline mb-4">
+                  <input type="text" name="name" id="contact-name" placeholder="Name" class="form-control "  onkeyup="validateName()" />
+                    <span id="name-error" style="color: red;"></span>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="email" name="email"  id="contact-email" placeholder="Email" class="form-control" onkeyup="validateEmail()" />
+                 <span id="email-error" style="color: red;"></span>
+							      {{#if emailError}}
+                      <h4 class="text-danger" id="emailExistError">{{emailError}}</h4>
+							      {{/if}}
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="password" name="password" id="contact-password" placeholder="Password" class="form-control" onkeyup="validatePassword()" />
+                   <span id="password-error" style="color: red;"></span>
+                </div>
+
+                
+
+                <div class="d-flex justify-content-center">
+                  <button type="submit"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" id="contact-submit" onclick="return validateForm()" >SUBMIT</button>
+                    <div id="submit-error" style="color: red;"></div>
+                </div>
+
+               
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <script
+  type="text/javascript">window.setTimeout("document.getElementById('emailExistError').style.display='none';", 3000); </script>

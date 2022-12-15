@@ -1,0 +1,47 @@
+
+<nav class="navbar" style="background-color:rgb(122, 228, 122) ;">
+  <div class="container-fluid">
+    <a class="navbar-brand">ADMIN PAGE</a>
+     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Admin</a>
+        </li>
+        </ul>
+        <a href="/admin/adminAddForm" style="margin-right: 15px;" class="btn btn-warning">Add User</a>
+         <a href="/admin/logout" class="btn btn-primary">logout</a>
+  </div>
+
+</nav>
+<br>
+ <div class="container">
+   <table class="table" id="userTable">
+  <thead>
+    <tr>
+      <th scope="col">No</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each userdetails }}
+    <tr>
+      <th scope="row">1</td>
+      <td>{{this.name}}</td>
+      <td >{{this.email}}</td>
+      <td>
+        <a href="/admin/edit-user/{{this._id}}" class="btn btn-primary">Edit</a>
+        <a href="/admin/delete-user/{{this._id}}" class="btn btn-danger"  onclick="return confirm('Are you sure to delete {{this.name}}')" >Delete</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+   
+</table>
+</div>
+<script>
+ $(document).ready( function () {
+    $('#userTable').DataTable();
+} );
+
+</script>

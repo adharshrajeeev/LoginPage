@@ -1,0 +1,27 @@
+<div class="demo-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-12 mx-auto">
+        <div class="p-5 bg-white rounded shadow-lg">
+          <h2 class="mb-2 text-center">Sign In</h2>
+          <p class="text-center lead">Sign In to manage all your devices</p>
+          <form action="/userlogin" method="post">
+            {{#if loginError}}
+              <p class="error" style="color: red;">{{loginError}}</p>
+            {{/if}}
+            <input name="email" class="form-control " placeholder="Email" type="email" id="contact-email"  onkeyup="validateEmail()">
+               <span id="email-error" style="color: red;"></span>
+            <input name="password" class="form-control " placeholder="Password" type="password"  onkeyup="validatePassword()" >
+             <span id="password-error" style="color: red;"></span>
+            <p class="m-0 py-4"><a href="" class="text-muted">Forget password?</a></p>
+            <button type="submit" class="btn btn-success btn-lg w-100 shadow-lg" onclick="return validateForm()">LOGIN</button>
+             <div id="submit-error" style="color: red;"></div>
+          </form>
+         <div class="text-center pt-4">
+          <p class="m-0">Do not have an account? <a href="/signup" class="text-dark font-weight-bold">Sign Up</a></p>
+        </div>          
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>
